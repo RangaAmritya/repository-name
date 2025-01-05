@@ -1,7 +1,6 @@
 package com.example.demoTrain.controller;
 
 
-import com.example.demoTrain.service.TrainService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +16,6 @@ import java.io.File;
 public class TrainController {
 
     public static final Logger logger = LoggerFactory.getLogger(TrainController.class);
-    @Autowired
-    private TrainService trainService;
 
     @GetMapping("/loggerTest")
     public void getLogger(){
