@@ -1,0 +1,14 @@
+# Use a base image with JDK 17
+FROM openjdk:17-jdk-slim
+
+# Set the working directory in the container
+WORKDIR /cicd_test
+
+# Copy the built JAR file from the build stage
+COPY target/*.jar cicd_test.jar
+
+# Expose the port your application runs on
+EXPOSE 8085
+
+# Define the command to run the application
+ENTRYPOINT ["java", "-jar", "cicd_test.jar"]
